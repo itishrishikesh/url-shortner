@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"github.com/go-redis/redis/v8"
 	"github.com/gofiber/fiber/v2"
-	"url-shortner/api/database"
+	"github.com/itishrishikesh/url-shortner/api/database"
 )
 
 func ResolveURL(ctx *fiber.Ctx) error {

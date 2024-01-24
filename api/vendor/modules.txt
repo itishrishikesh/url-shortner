@@ -27,7 +27,7 @@ github.com/gofiber/fiber/v2/internal/schema
 github.com/gofiber/fiber/v2/log
 github.com/gofiber/fiber/v2/middleware/logger
 github.com/gofiber/fiber/v2/utils
-# github.com/google/uuid v1.5.0
+# github.com/google/uuid v1.6.0
 ## explicit
 github.com/google/uuid
 # github.com/joho/godotenv v1.5.1
