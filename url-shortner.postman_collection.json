@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "34d2277b-2566-4536-9716-6588d4a02d84",
+		"name": "url-shortner",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20766836"
+	},
+	"item": [
+		{
+			"name": "shorten",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"url\":\"google.com\",\r\n    \"short\": \"gg\",\r\n    \"expiry\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

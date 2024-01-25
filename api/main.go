@@ -12,7 +12,10 @@ import (
 
 func setupRoutes(app *fiber.App) {
 	app.Get("/:url", routes.ResolveURL)
-	app.Post("/api/v1", routes.ShortenURL)
+	app.Get("/", func(ctx *fiber.Ctx) error {
+		return ctx.Status(fiber.StatusOK).JSON(fiber.Map{"status": "url-shortner service is up!"})
+	})
+	app.Post("/shorten", routes.ShortenURL)
 }
 
 func main() {

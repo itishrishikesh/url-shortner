@@ -53,7 +53,7 @@ func ShortenURL(c *fiber.Ctx) error {
 		if valInt <= 0 {
 			limit, _ := r2.TTL(database.Ctx, c.IP()).Result()
 			return c.Status(fiber.StatusServiceUnavailable).JSON(fiber.Map{
-				"error":            "Rate limit exceeded",
+				"error":            "You have reached the limit of " + os.Getenv("API_QUOTA") + " requests per minute",
 				"rate_limit_reset": limit / time.Nanosecond / time.Minute,
 			})
 		}
@@ -61,10 +61,7 @@ func ShortenURL(c *fiber.Ctx) error {
 
 	// Check if the input is a valid URL
 	if !govalidator.IsURL(body.URL) {
-		err := c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "invalid url"})
-		if err != nil {
-			return err
-		}
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "Invalid URL: " + body.URL})
 	}
 
 	// Check for domain error
