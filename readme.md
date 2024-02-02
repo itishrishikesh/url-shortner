@@ -3,7 +3,7 @@
 
 URL-Shortner is a simple and fast service that allows you to shorten long URLs and access them with a custom alias. It is written in Go and uses Redis as the database. It also provides an API endpoint for creating and retrieving shortened URLs.
 
-![Untitled Diagram drawio (2)](https://github.com/itishrishikesh/url-shortner/assets/24785679/692e29de-7eac-4455-82cc-ba7f9625eecb)
+![Untitled Diagram drawio (3)](https://github.com/itishrishikesh/url-shortner/assets/24785679/2fe36927-b9c1-4a61-be08-595c6a133919)
 
 ## Features
 
